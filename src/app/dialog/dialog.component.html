@@ -1,0 +1,31 @@
+<article class="postcard light yellow">
+
+    <div class="postcard__text t-dark">
+        <h1 class="postcard__title yellow"><a href="#">{{this.viewData.title}}</a></h1>
+        <h3 *ngIf="this.viewData.director"><a href="#">{{this.viewData.director}}</a></h3>
+        <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>{{this.viewData.date_added | date}}
+            </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{this.viewData.description}}</div>
+        <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{this.viewData.type}}</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>{{this.viewData.duration}}</li>
+            <li class="tag__item"><i class="fa-solid fa-star mr-2"></i>{{this.viewData.rating}}</li>
+            <li class="tag__item"><i class="fa-regular fa-calendar-days mr-2 "></i>{{this.viewData.release_year}}</li>
+            <li class="tag__item"><i class="fa-sharp fa-solid fa-globe mr-2"></i>{{this.viewData.country}}</li>
+        </ul>
+        <div class="postcard__bar"></div>
+        <h4>Listed In</h4>
+        <div class="postcard__preview-txt">{{this.viewData.listed_in}}</div>
+        <div *ngIf="this.viewData.cast">
+            <h4>Cast</h4>
+        <div class="postcard__preview-txt">{{this.viewData.cast}}</div>
+        </div>
+
+
+
+    </div>
+</article>
