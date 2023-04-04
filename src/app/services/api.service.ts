@@ -18,7 +18,7 @@ export class ApiService {
     search: string,
     type:string
   ): Observable<MovieApi> {
-    const href = 'http://localhost:9000/api/movie/all';
+    const href = 'https://fletnix-backend.onrender.com/api/movie/all';
     const requestUrl = `${href}?sort=${sort}&order=${order}&page=${
       page + 1
     }&search=${search}&type=${type}`;
@@ -26,16 +26,16 @@ export class ApiService {
   }
 
   getOneMovie(id: string): Observable<any> {
-    const requestUrl = `http://localhost:9000/api/movie/${id}`;
+    const requestUrl = `https://fletnix-backend.onrender.com/api/movie/${id}`;
 
     return this.http.get<any>(requestUrl);
   }
 
   signUp(data: SignUp) {
-    return this.http.post<any>('http://localhost:9000/api/auth/signup', data);
+    return this.http.post<any>('https://fletnix-backend.onrender.com/api/auth/signup', data);
   }
 
   login(data: Login) {
-    return this.http.post<any>('http://localhost:9000/api/auth/login', data);
+    return this.http.post<any>('https://fletnix-backend.onrender.com/api/auth/login', data);
   }
 }
