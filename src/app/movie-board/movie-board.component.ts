@@ -22,6 +22,7 @@ export class MovieBoardComponent implements AfterViewInit {
     'title',
     'type',
     'cast',
+    'date_added',
     'rating',
     'action',
   ];
@@ -119,6 +120,7 @@ export interface Movie {
   show_id: string;
   type: string;
   title: string;
+  date_added:string;
   rating: string;
   cast: string;
 }
